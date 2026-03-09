@@ -2,10 +2,19 @@ package Student;
 
 public class AppTest {
     public static void main(String[] args) {
-      Student s1 = new Student(name: "Petar", surname: "Petrić", id: 12);
-      Student s2 = new Student(name: "Franka", surname: "Franć", id: 43);
+      Student s1 = new Student( "Petar", "Petrić", 12);
+      Student s2 = new Student( "Franka",  "Franć",  43);
       s1.subscribeToStudentService();
       s2.subscribeToStudentService();
+
+      System.out.println(s1);
+      Hlace h1 = new Hlace("Levis 501");
+      h1.koristeneHlace();
+      h1.nekakoOciscene(s1);
+      Hlace h2;
+      h2 = h1.nekakoOciscene(s1);
+        System.out.println(h1);
+        System.out.println(h2);
 
     }
 }
